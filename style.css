@@ -5,3 +5,35 @@
 body {
     background-color: lavender;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+header a {
+    text-decoration: none;
+    color: purple;
+}
+
+.container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.start-quiz {
+    text-align: center;
+} 
+
+.start-quiz h3 {
+    color: blueviolet;
+    opacity: 75%;
+}
+
+.btn {
+    width: fit-content;
+    align-items: center;
+    background-color: plum;
+    border-radius: 10px;
+}
