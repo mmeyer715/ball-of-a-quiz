@@ -67,32 +67,32 @@ var quizQuest = [
     {
         questions: "What is the pop method for arrays in JavaScript?",
         options: {
-            a: "You can add a value asthe last item of an array",
+            a: "You can add a value as the last item of an array",
             b: "You can remove the last item of an array",
-            c: "You can sotr the items in an array",
+            c: "You can sort the items in an array",
             d: "You can remove the first item of an array",
         },
-        ans: ""
+        ans: "b"
     },
     {
-        questions: "",
+        questions: "Where do we put the JavaScript inside of the HTML?",
         options: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "<javascript>",
+            b: "<js>",
+            c: "<script>",
+            d: "<java>",
         },
-        ans: ""
+        ans: "c"
     },
     {
-        questions: "",
+        questions: "Which of the following methods is used to access HTML elements using JavaScript?",
         options: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: ".getAttribute()",
+            b: ".getElementsByClassName()",
+            c: ".getElementById()",
+            d: "both b and c",
         },
-        ans: ""
+        ans: "d"
     },
     {
         questions: "Which is not a data type in JavaScript?",
