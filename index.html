@@ -18,7 +18,7 @@
         </header>
 
         <div id="container">
-            <div class="intro">
+            <div id="hidden" class="intro">
                 <h1>
                     Ball of a Quiz<br>
                     JavaScript Basics<br>
@@ -26,14 +26,12 @@
                 <h3>
                     The clock is ticking!
                 </h3>
-                <button onclick="hideIntro()">Start Quiz</button>
+                <button onclick="hide()">Start Quiz</button>
             </div>    
         </div> 
-        
-
-        <div class="hsCont" id="highscores">
-            <div 
-        </div>
+        <!-- <button id="complete">Submit Results</button> -->
+        <button id="submit">Submit Answers</button>
         <script src="./script.js"></script>
+        <div id="highscores"></div>
     </body>
 </html>

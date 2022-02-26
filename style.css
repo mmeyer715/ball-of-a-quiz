@@ -22,6 +22,10 @@ header a {
     text-align: center;
 }
 
+.intro.b {
+    visibility: hidden;
+}
+
 .intro h1 {
     text-align: center;
 }
