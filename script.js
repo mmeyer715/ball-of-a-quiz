@@ -42,35 +42,35 @@ var quizQuest = [
             c: "Errors  that come up when loading a web page, like improper syntax errors.",
             d: "Errors that occur when the user fails to provide a valid user name/password required for access to a file/directory.",
         },
-        ans: ""
+        ans: "b"
     },
     {
-        questions: "",
+        questions: "Which of the following character types declare an array?",
         options: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "var test = (];",
+            b: "var test = ();",
+            c: "var test = [];",
+            d: "var test = {};",
         },
-        ans: ""
+        ans: "c"
     },
     {
-        questions: "",
+        questions: "Which of the following is not a loop type in JavaScript?",
         options: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "else loop",
+            b: "while loop",
+            c: "for loop",
+            d: "do...while loop",
         },
-        ans: ""
+        ans: "a"
     },
     {
-        questions: "",
+        questions: "What is the pop method for arrays in JavaScript?",
         options: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "You can add a value asthe last item of an array",
+            b: "You can remove the last item of an array",
+            c: "You can sotr the items in an array",
+            d: "You can remove the first item of an array",
         },
         ans: ""
     },
