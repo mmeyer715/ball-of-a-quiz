@@ -17,21 +17,23 @@ header a {
     color: purple;
 }
 
-#container {
+.intro {
     display: block;
     text-align: center;
 }
 
-#container h1 {
+.intro h1 {
     text-align: center;
 }
 
-#container h3 {
+.intro h3 {
     color: purple;
     opacity: 75%;
-}
+}   
 
-#container button {
+
+
+.intro button {
     width: fit-content;
     align-items: center;
     background-color: plum;
