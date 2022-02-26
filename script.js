@@ -25,22 +25,22 @@ var quizQuest = [
         ans: "c"
     },
     {
-        questions: "",
+        questions: "Which of the following is a type of pop-up box in JavaScript?",
         options: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "confirm and",
+            b: "prompt",
+            c: "alert",
+            d: "all of the above",
         },
-        ans: ""
+        ans: "d"
     },
     {
-        questions: "",
+        questions: "What is a logical error?",
         options: {
-            a: "",
-            b: "",
-            c: "",
-            d: "",
+            a: "Errors that come due to misuse of the command inside the HTML language.",
+            b: "Errors that occur due to the bad logic performed ona function with a different operation.",
+            c: "Errors  that come up when loading a web page, like improper syntax errors.",
+            d: "Errors that occur when the user fails to provide a valid user name/password required for access to a file/directory.",
         },
         ans: ""
     },
