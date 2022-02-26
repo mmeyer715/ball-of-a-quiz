@@ -17,21 +17,21 @@ header a {
     color: purple;
 }
 
-.container {
-    width: 100%;
-    margin: 20px auto;
+#container {
+    display: block;
+    text-align: center;
 }
 
-.start-quiz {
+#container h1 {
     text-align: center;
-} 
+}
 
-.start-quiz h3 {
-    color: blueviolet;
+#container h3 {
+    color: purple;
     opacity: 75%;
 }
 
-.btn {
+#container button {
     width: fit-content;
     align-items: center;
     background-color: plum;

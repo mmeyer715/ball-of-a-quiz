@@ -7,3 +7,12 @@ function startTimer() {
 }
 
 // hide intro and start quiz
+
+function hideIntro() {
+    var titleIntro = document.getElementById("container");
+    if (titleIntro.style.display === "none") {
+        titleIntro.style.display = "block";
+    } else {
+        titleIntro.style.display = "none";
+    }
+}    
