@@ -1,6 +1,29 @@
+var startBtn = document.getElementById('start');
+var quizIntro = document.getElementById('intro');
+var questionText = document.getElementById('quest-text');
+var optA = document.getElementById('a');
+var optB = document.getElementById('b');
+var optC = document.getElementById('c');
+var optD = document.getElementById('d');
+var backBtn = document.getElementById('back');
+var nextBtn = document.getElementById('next');
+var submitBtn = document.getElementById('submit');
+var playScore = document.getElementById('playScore');
+var highscore = document.getElementById('highscores');
+var userName = document.getElementById('user-name');
+var userScore = document.getElementById('user-score');
+var returnStart = document.getElementById('return');
+
+/*TODO
+-create function to start quiz on click
+-add onclick event listeners to buttons
+-create timer that decrease if question is missed
+-create function to validate questions
+-create function to hide elements that are not currently in use
+*/
 
 
-//  quiz questions
+//  array of questions
 var quizQuest = [
     {
         question: "JavaScript is a ________ ________.",
@@ -115,11 +138,11 @@ var quizQuest = [
 ];
 
 
-function hide() {
-    var titleIntro = document.getElementById("hideIntro");
-    if (titleIntro.style.display === "none") {
-        titleIntro.style.display = "block";
-    } else {
-        titleIntro.style.display = "none";
-    }
-};
+// function hide() {
+//     var titleIntro = document.getElementById("hideIntro");
+//     if (titleIntro.style.display === "none") {
+//         titleIntro.style.display = "block";
+//     } else {
+//         titleIntro.style.display = "none";
+//     }
+// };

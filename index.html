@@ -41,6 +41,13 @@
                 <button class="btn-next" id="next">Next</button>
                 <button class="btn-submit" id="submit">Submit Results</button>
             </div>
+
+            <!-- user score -->
+            <div class="score">
+                <span id="playScore">0</span>
+                <span id="total">/100</span>
+            </div>
+
             <!-- highscores area -->
             <div id="highscores" class="scores">
                 <table>
@@ -50,15 +57,11 @@
                             <th>Score</th>
                         </tr>
                         <tr>
-                            <td id="user-name">md</td>
-                            <td id="user-score">90</td>
-                        </tr>
-                        <tr>
-                            <td>md</td>
-                            <td>90</td>
-                        </tr>    
+                            <td id="user-name"></td>
+                            <td id="user-score"></td>
+                        </tr> 
                 </table>
-                    <button class="btn-back" id="back">Back</button>
+                    <button class="btn-back" id="return">Back</button>
             </div>
         </main>
         <script src="./script.js"></script>
