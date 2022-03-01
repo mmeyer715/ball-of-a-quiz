@@ -1,10 +1,6 @@
-//  pulling elements from html and creating their vars
-var timer = document.querySelector("count");
-var startBtn = document.querySelector("#start");
-var finalScore = document.getElementById("score");
-var highscore = document.getElementById("highscores");
 
-//  creating quiz questions
+
+//  quiz questions
 var quizQuest = [
     {
         question: "JavaScript is a ________ ________.",
