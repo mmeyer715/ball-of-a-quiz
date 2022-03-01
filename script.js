@@ -1,8 +1,8 @@
 //  pulling elements from html and creating their vars
 var timer = document.querySelector("count");
 var startBtn = document.querySelector("#start");
-var resultsBox = document.getElementById("#submit");
-var highscore = document.getElementById("#highscores");
+var finalScore = document.getElementById("score");
+var highscore = document.getElementById("highscores");
 
 //  creating quiz questions
 var quizQuest = [
@@ -119,38 +119,11 @@ var quizQuest = [
 ];
 
 
-// creating timer function
-function startTimer() {
-    timer.textContent = count;
-};
-
-
-// generating quiz questions
-function generateQuiz() {
-    // holds user output
-};
-// generating your results
-function yourResults() {
-    
-};
-
-// storing the to the leaderboard
-function leaderboard() {
-
-};
-
-generateQuiz();
-
-// hide intro and start quiz
-
 function hide() {
-    var hide = document.getElementById("hidden");
-    hide.classList.remove("intro");
-    hide.classList.add("intro.b h1 h3 button")
-    // var titleIntro = document.getElementsByClassName("intro");
-    // if (titleIntro.style.display === "none") {
-    //     titleIntro.style.display = "block";
-    // } else {
-    //     titleIntro.style.display = "none";
-    // }
+    var titleIntro = document.getElementById("hideIntro");
+    if (titleIntro.style.display === "none") {
+        titleIntro.style.display = "block";
+    } else {
+        titleIntro.style.display = "none";
+    }
 };

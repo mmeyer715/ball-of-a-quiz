@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8" />
-        <meta name"viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ball of a Quiz - JavaScript Basics</title>
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -12,13 +12,13 @@
 
         <header>
             <h4>
-            <a href="#highscores">View Highscores</a>
+            <a onclick="seeHighscores() id="highscores">View Highscores</a>
             </h4>
             <h4>Time Remaining: <span id="count">90</span>
         </header>
 
         <div id="container">
-            <div id="hidden" class="intro">
+            <div id="intro" class="form">
                 <h1>
                     Ball of a Quiz<br>
                     JavaScript Basics<br>
@@ -26,12 +26,12 @@
                 <h3>
                     The clock is ticking!
                 </h3>
-                <button onclick="hide()">Start Quiz</button>
-            </div>    
+                <button id="start" onclick="startQuiz()">Start Quiz</button>
+            </div>
         </div> 
         <!-- <button id="complete">Submit Results</button> -->
-        <button id="submit">Submit Answers</button>
         <script src="./script.js"></script>
+        <div id="score"></div>
         <div id="highscores"></div>
     </body>
-</html>
+<!-- </html> -->
