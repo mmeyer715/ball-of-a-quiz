@@ -26,10 +26,13 @@
             <div id="questions" class="qstStyle">
                 <div id="quest-text"></div>
                 <div class="possAnswers">
-                    <button class="btn-answers" id="a"></button>
-                    <button class="btn-answers" id="a"></button>
-                    <button class="btn-answers" id="a"></button>
-                    <button class="btn-answers" id="a"></button>
+                    <button class="btn-answers" id="a">A</button>
+                    <br>
+                    <button class="btn-answers" id="b">B</button>
+                    <br>
+                    <button class="btn-answers" id="c">C</button>
+                    <br>
+                    <button class="btn-answers" id="d">D</button>
                 </div>
             </div>
             <!-- quiz controls -->
@@ -39,17 +42,23 @@
                 <button class="btn-submit" id="submit">Submit Results</button>
             </div>
             <!-- highscores area -->
-            <div id="highscores">
-                <div  class="tblHighscores">
+            <div id="highscores" class="scores">
+                <table>
                     <h3>Highscores</h3>
-                    <table>
                         <tr>
                             <th>Player</th>
                             <th>Score</th>
                         </tr>
-                    </table>
-                <button class="btn-back" id="back">Back</button>
-                </div>
+                        <tr>
+                            <td id="user-name">md</td>
+                            <td id="user-score">90</td>
+                        </tr>
+                        <tr>
+                            <td>md</td>
+                            <td>90</td>
+                        </tr>    
+                </table>
+                    <button class="btn-back" id="back">Back</button>
             </div>
         </main>
         <script src="./script.js"></script>
