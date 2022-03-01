@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial scale=1.0" />
+        <link rel="stylesheet" href="./style.css">
+
+        <title>Quiz Quest - JavaScript Basics</title>
+    </head>
+    <body>
+        <!-- header with anchor to highscores plus timer -->
+        <header>
+            <a href="#highscores"><h3>Highscores</h3></a>
+            <h3>Time Remaining: <span id="count">90</span></h3>
+        </header>
+        <!-- starting main quiz container -->
+        <main id="container" class="wrapper">
+            <div id="quiz-box">
+                <div id="quiz">
+                    <!-- intro and instructions -->
+                    <div id="intro">
+                        <h1>Quiz Quest - JavaScript Basics</h1>
+                        <h3>Answer all of the questions before the time runs out! If you get one wrong, 10 seconds will be deducted from the time remaining! Hurry, the clock is ticking! </h3>
+                    </div>
+                    <!-- start quiz button -->
+                    <button class="btnStart" id="start">Start Quest</button>
+                    <!-- area where questions and answers will be generated -->
+                    <div id="questions" class="qstStyle">
+                        <div id="quest-text"></div>
+                        <div class="possAnswers">
+                            <button class="btn-answers" id="a"></button>
+                            <button class="btn-answers" id="a"></button>
+                            <button class="btn-answers" id="a"></button>
+                            <button class="btn-answers" id="a"></button>
+                        </div>
+                    </div>
+                    <!-- quiz controls -->
+                    <div class="controls">
+                        <button class="btn-back" id="back">Back</button>
+                        <button class="btn-next" id="next">Next</button>
+                        <button class="btn-submit" id="submit">Submit Results</button>
+                    </div>
+                    <!-- highscores area -->
+                    <div id="highscores">
+                        <div  class="tblHighscores">
+                            <h3>Highscores</h3>
+                            <table>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>Score</th>
+                                </tr>
+                            </table>
+                        <button class="btn-back" id="back">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
