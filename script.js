@@ -17,7 +17,7 @@ var returnStart = document.getElementById('return');
 backBtn.addEventListener('click',back);
 nextBtn.addEventListener('click',next);
 submitBtn.addEventListener('click',submit);
-startBtn.addEventListener('click', startQuiz());
+// startBtn.addEventListener('click', startQuiz());
 
 /*TODO
 -create function to start quiz on click
@@ -26,6 +26,24 @@ startBtn.addEventListener('click', startQuiz());
 -create function to validate questions
 -create function to hide elements that are not currently in use
 */
+var sectionsArray = [
+    introSect = document.querySelector("#intro"),
+    questionBox = document.querySelector("#questions"),
+    endScore = document.querySelector("#end-score"),
+    highscoreArea = document.querySelector("#highscores"),
+];
+
+function showElement(element, elementArr) {
+    for(var i = 0; i < elementArr.length; i++) {
+        if(element !== elementArr[i]) {
+            elementArr[i].classList.add("hidden");
+        }
+        else {
+            element.classList.remove("hidden");
+        }
+    }
+}
+
 let currentQuestion = 0;
 var score = 0;
 
@@ -131,7 +149,7 @@ var quizQuest = [
         ]
     }
 ];
-
+startBtn.addEventListener('click', startQuiz())
 function startQuiz() {
     currentQuestion = 0;
     questionText.innerHTML = quizQuest[currentQuestion].question;
@@ -148,7 +166,7 @@ function startQuiz() {
             next();
         }
     }
-    optB.innerHTML = quizQuest[currentQuestion].answers[0].a;
+    optB.innerHTML = quizQuest[currentQuestion].answers[1].b;
     optB.onclick = () => {
         let ansNum = 0;
         if(quizQuest[currentQuestion].answers[ansNum].answer) {
@@ -161,7 +179,7 @@ function startQuiz() {
             next();
         }
     }
-    optC.innerHTML = quizQuest[currentQuestion].answers[0].a;
+    optC.innerHTML = quizQuest[currentQuestion].answers[2].c;
     optC.onclick = () => {
         let ansNum = 0;
         if(quizQuest[currentQuestion].answers[ansNum].answer) {
@@ -174,7 +192,7 @@ function startQuiz() {
             next();
         }
     }
-    optD.innerHTML = quizQuest[currentQuestion].answers[0].a;
+    optD.innerHTML = quizQuest[currentQuestion].answers[3].d;
     optD.onclick = () => {
         let ansNum = 0;
         if(quizQuest[currentQuestion].answers[ansNum].answer) {
@@ -190,13 +208,13 @@ function startQuiz() {
     backBtn.classList.add('hide');
 }
 
-startQuiz
+startQuiz();
 
-// function hide() {
-//     var titleIntro = document.getElementById("hideIntro");
-//     if (titleIntro.style.display === "none") {
-//         titleIntro.style.display = "block";
-//     } else {
-//         titleIntro.style.display = "none";
-//     }
-// };
+function hide() {
+    var titleIntro = document.getElementById("Intro");
+    if (titleIntro.style.display === "none") {
+        titleIntro.style.display = "block";
+    } else {
+        titleIntro.style.display = "none";
+    }
+};

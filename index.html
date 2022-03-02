@@ -19,12 +19,12 @@
             <div id="intro" class="instructions">
                 <h1>Quiz Quest - JavaScript Basics</h1>
                 <h3>Answer all of the questions before the time runs out! If you get one wrong, 10 seconds will be deducted from the time remaining! Hurry, the clock is ticking! </h3>
+                <button id="start">Start Quest</button>
             </div>
-            <!-- start quiz button -->
-            <button class="btnStart" id="start">Start Quest</button>
+            
             <!-- area where questions and answers will be generated -->
-            <div id="questions" class="qstStyle">
-                <div id="quest-text"></div>
+            <div id="questions" class="qstStyle hide">
+                <p id="quest-text"></p>
                 <div class="possAnswers">
                     <button class="btn-answers" id="a">A</button>
                     <br>
@@ -34,22 +34,21 @@
                     <br>
                     <button class="btn-answers" id="d">D</button>
                 </div>
-            </div>
-            <!-- quiz controls -->
-            <div class="controls">
-                <button class="btn-back" id="back">Back</button>
-                <button class="btn-next" id="next">Next</button>
-                <button class="btn-submit" id="submit">Submit Results</button>
+                <div class="controls">
+                    <button class="btn-back" id="back">Back</button>
+                    <button class="btn-next" id="next">Next</button>
+                    <button class="btn-submit" id="submit">Submit Results</button>
+                </div>
             </div>
 
             <!-- user score -->
-            <div class="score">
+            <div id="end-score" class="score hide">
                 <span id="playScore">0</span>
                 <span id="total">/100</span>
             </div>
 
             <!-- highscores area -->
-            <div id="highscores" class="scores">
+            <div id="highscores" class="scores hide">
                 <table>
                     <h3>Highscores</h3>
                         <tr>
