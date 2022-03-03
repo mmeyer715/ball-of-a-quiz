@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial scale=1.0" />
+        <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="./style.css">
 
         <title>Quiz Quest - JavaScript Basics</title>
@@ -19,7 +19,7 @@
             <div id="intro" class="instructions">
                 <h1>Quiz Quest - JavaScript Basics</h1>
                 <h3>Answer all of the questions before the time runs out! If you get one wrong, 10 seconds will be deducted from the time remaining! Hurry, the clock is ticking! </h3>
-                <button id="start">Start Quest</button>
+                <button id="start" onclick="startQuiz()">Start Quest</button>
             </div>
             
             <!-- area where questions and answers will be generated -->
@@ -48,7 +48,7 @@
             </div>
 
             <!-- highscores area -->
-            <div id="highscores" class="scores hide">
+            <div id="highscores" class="score">
                 <table>
                     <h3>Highscores</h3>
                         <tr>

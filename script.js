@@ -1,6 +1,7 @@
 var startBtn = document.getElementById('start');
 var quizIntro = document.getElementById('intro');
 var questionText = document.getElementById('quest-text');
+var questionBox = document.getElementById('questions');
 var optA = document.getElementById('a');
 var optB = document.getElementById('b');
 var optC = document.getElementById('c');
@@ -18,31 +19,6 @@ backBtn.addEventListener('click',back);
 nextBtn.addEventListener('click',next);
 submitBtn.addEventListener('click',submit);
 // startBtn.addEventListener('click', startQuiz());
-
-/*TODO
--create function to start quiz on click
--add onclick event listeners to buttons
--create timer that decrease if question is missed
--create function to validate questions
--create function to hide elements that are not currently in use
-*/
-var sectionsArray = [
-    introSect = document.querySelector("#intro"),
-    questionBox = document.querySelector("#questions"),
-    endScore = document.querySelector("#end-score"),
-    highscoreArea = document.querySelector("#highscores"),
-];
-
-function showElement(element, elementArr) {
-    for(var i = 0; i < elementArr.length; i++) {
-        if(element !== elementArr[i]) {
-            elementArr[i].classList.add("hidden");
-        }
-        else {
-            element.classList.remove("hidden");
-        }
-    }
-}
 
 let currentQuestion = 0;
 var score = 0;
@@ -149,8 +125,11 @@ var quizQuest = [
         ]
     }
 ];
-startBtn.addEventListener('click', startQuiz())
+
+
 function startQuiz() {
+    quizIntro.classList.add('hide');
+    questionBox.classList.remove('hide');
     currentQuestion = 0;
     questionText.innerHTML = quizQuest[currentQuestion].question;
     optA.innerHTML = quizQuest[currentQuestion].answers[0].a;
@@ -205,16 +184,15 @@ function startQuiz() {
             next();
         }
     }
-    backBtn.classList.add('hide');
+    // backBtn.classList.add('hide');
 }
 
-startQuiz();
 
-function hide() {
-    var titleIntro = document.getElementById("Intro");
-    if (titleIntro.style.display === "none") {
-        titleIntro.style.display = "block";
-    } else {
-        titleIntro.style.display = "none";
-    }
-};
+// function hide() {
+//     var titleIntro = document.getElementById("Intro");
+//     if (titleIntro.style.display === "none") {
+//         titleIntro.style.display = "block";
+//     } else {
+//         titleIntro.style.display = "none";
+//     }
+// };
