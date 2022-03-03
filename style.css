@@ -26,9 +26,8 @@ header a {
      margin: 100px;
      display: flex;
      flex-direction: column;
-     /* position: relative; */
+     position: relative;
      padding: 200px;
-     /* justify-content: center; */
 }
 
 /* instruction style */

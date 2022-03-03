@@ -1,3 +1,4 @@
+// linking ids to js
 var startBtn = document.getElementById('start');
 var quizIntro = document.getElementById('intro');
 var questionText = document.getElementById('quest-text');
@@ -14,14 +15,16 @@ var highscore = document.getElementById('highscores');
 var userName = document.getElementById('user-name');
 var userScore = document.getElementById('user-score');
 var returnStart = document.getElementById('return');
+var timer = document.getElementById('count');
 
-backBtn.addEventListener('click',back);
-nextBtn.addEventListener('click',next);
+
 submitBtn.addEventListener('click',submit);
-// startBtn.addEventListener('click', startQuiz());
 
+// creating index to starting elements of quiz
 let currentQuestion = 0;
 var score = 0;
+var secondsLeft = 90;
+var timerId;
 
 //  array of questions
 var quizQuest = [
@@ -126,73 +129,72 @@ var quizQuest = [
     }
 ];
 
+function countdown () {
+    secondsLeft--
+    timer.innerHTML = secondsLeft
+    if(secondsLeft === 0){
+        clearInterval(timerId)
+    }
+}
+
+function checkAns(event) {
+    event.preventDefault();
+        console.log(event.target.dataset.answer);
+       if (event.target.dataset.answer === "true") {
+           playScore.innerHTML = score += 10
+       }
+       else {
+           secondsLeft -= 10 ;
+       }
+    currentQuestion++;
+    nextQuestion();
+}
+
+
 
 function startQuiz() {
     quizIntro.classList.add('hide');
     questionBox.classList.remove('hide');
     currentQuestion = 0;
+    timer.innerHTML = secondsLeft
+    timerId = setInterval(countdown, 1000)
+
     questionText.innerHTML = quizQuest[currentQuestion].question;
+
     optA.innerHTML = quizQuest[currentQuestion].answers[0].a;
-    optA.onclick = () => {
-        let ansNum = 0;
-        if(quizQuest[currentQuestion].answers[ansNum].answer) {
-            if(score < 10) {
-                score++;
-            }
-        }
-        userScore.innerHTML = score;
-        if(currentQuestion < 9) {
-            next();
-        }
-    }
+    optA.dataset.answer = quizQuest[currentQuestion].answers[0].answer;
+    optA.onclick = checkAns
+    
     optB.innerHTML = quizQuest[currentQuestion].answers[1].b;
-    optB.onclick = () => {
-        let ansNum = 0;
-        if(quizQuest[currentQuestion].answers[ansNum].answer) {
-            if(score < 10) {
-                score++;
-            }
-        }
-        userScore.innerHTML = score;
-        if(currentQuestion < 9) {
-            next();
-        }
-    }
+    optB.dataset.answer = quizQuest[currentQuestion].answers[1].answer;
+    optB.onclick = checkAns
+
     optC.innerHTML = quizQuest[currentQuestion].answers[2].c;
-    optC.onclick = () => {
-        let ansNum = 0;
-        if(quizQuest[currentQuestion].answers[ansNum].answer) {
-            if(score < 10) {
-                score++;
-            }
-        }
-        userScore.innerHTML = score;
-        if(currentQuestion < 9) {
-            next();
-        }
-    }
+    optC.dataset.answer = quizQuest[currentQuestion].answers[2].answer;
+    optC.onclick = checkAns
+
     optD.innerHTML = quizQuest[currentQuestion].answers[3].d;
-    optD.onclick = () => {
-        let ansNum = 0;
-        if(quizQuest[currentQuestion].answers[ansNum].answer) {
-            if(score < 10) {
-                score++;
-            }
-        }
-        userScore.innerHTML = score;
-        if(currentQuestion < 9) {
-            next();
-        }
-    }
-    // backBtn.classList.add('hide');
+    optD.dataset.answer = quizQuest[currentQuestion].answers[3].answer;
+    optD.onclick = checkAns
 }
 
+function nextQuestion() {
+    questionText.innerHTML = quizQuest[currentQuestion].question;
 
-// function hide() {
-//     var titleIntro = document.getElementById("Intro");
-//     if (titleIntro.style.display === "none") {
-//         titleIntro.style.display = "block";
-//     } else {
-//         titleIntro.style.display = "none";
-//     }
-// };
+    optA.innerHTML = quizQuest[currentQuestion].answers[0].a;
+    optA.dataset.answer = quizQuest[currentQuestion].answers[0].answer;
+    optA.onclick = checkAns
+    
+    optB.innerHTML = quizQuest[currentQuestion].answers[1].b;
+    optB.dataset.answer = quizQuest[currentQuestion].answers[1].answer;
+    optB.onclick = checkAns
+
+    optC.innerHTML = quizQuest[currentQuestion].answers[2].c;
+    optC.dataset.answer = quizQuest[currentQuestion].answers[2].answer;
+    optC.onclick = checkAns
+
+    optD.innerHTML = quizQuest[currentQuestion].answers[3].d;
+    optD.dataset.answer = quizQuest[currentQuestion].answers[3].answer;
+    optD.onclick = checkAns
+}
+

@@ -21,7 +21,6 @@
                 <h3>Answer all of the questions before the time runs out! If you get one wrong, 10 seconds will be deducted from the time remaining! Hurry, the clock is ticking! </h3>
                 <button id="start" onclick="startQuiz()">Start Quest</button>
             </div>
-            
             <!-- area where questions and answers will be generated -->
             <div id="questions" class="qstStyle hide">
                 <p id="quest-text"></p>
@@ -35,20 +34,18 @@
                     <button class="btn-answers" id="d">D</button>
                 </div>
                 <div class="controls">
-                    <button class="btn-back" id="back">Back</button>
-                    <button class="btn-next" id="next">Next</button>
                     <button class="btn-submit" id="submit">Submit Results</button>
                 </div>
             </div>
 
             <!-- user score -->
-            <div id="end-score" class="score hide">
+            <div id="end-score" class="score">
                 <span id="playScore">0</span>
                 <span id="total">/100</span>
             </div>
 
             <!-- highscores area -->
-            <div id="highscores" class="score">
+            <div id="highscores" class="scores hide">
                 <table>
                     <h3>Highscores</h3>
                         <tr>
