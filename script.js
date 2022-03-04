@@ -15,10 +15,8 @@ var userScore = document.getElementById('user-score');
 var returnStart = document.getElementById('return');
 var timer = document.getElementById('count');
 var correctIncorrect = document.getElementById('correctIncorrect');
-var answerBtns = document.getElementById('answerBtns');
-
-
-submitBtn.addEventListener('click',submit);
+var answerBtns = document.getElementById('answer');
+var endScore = document.getElementById('end-score');
 
 // creating index to starting elements of quiz
 let currentQuestion = 0;
@@ -182,32 +180,41 @@ function startQuiz() {
 }
 
 function nextQuestion() {
-    questionText.innerHTML = quizQuest[currentQuestion].question;
+    if(currentQuestion <= 9){
+        questionText.innerHTML = quizQuest[currentQuestion].question;
 
-    optA.innerHTML = quizQuest[currentQuestion].answers[0].a;
-    optA.dataset.answer = quizQuest[currentQuestion].answers[0].answer;
-    optA.onclick = checkAns
-    
-    optB.innerHTML = quizQuest[currentQuestion].answers[1].b;
-    optB.dataset.answer = quizQuest[currentQuestion].answers[1].answer;
-    optB.onclick = checkAns
+        optA.innerHTML = quizQuest[currentQuestion].answers[0].a;
+        optA.dataset.answer = quizQuest[currentQuestion].answers[0].answer;
+        optA.onclick = checkAns;
+        
+        optB.innerHTML = quizQuest[currentQuestion].answers[1].b;
+        optB.dataset.answer = quizQuest[currentQuestion].answers[1].answer;
+        optB.onclick = checkAns;
 
-    optC.innerHTML = quizQuest[currentQuestion].answers[2].c;
-    optC.dataset.answer = quizQuest[currentQuestion].answers[2].answer;
-    optC.onclick = checkAns
+        optC.innerHTML = quizQuest[currentQuestion].answers[2].c;
+        optC.dataset.answer = quizQuest[currentQuestion].answers[2].answer;
+        optC.onclick = checkAns;
 
-    optD.innerHTML = quizQuest[currentQuestion].answers[3].d;
-    optD.dataset.answer = quizQuest[currentQuestion].answers[3].answer;
-    optD.onclick = checkAns
+        optD.innerHTML = quizQuest[currentQuestion].answers[3].d;
+        optD.dataset.answer = quizQuest[currentQuestion].answers[3].answer;
+        optD.onclick = checkAns;
+    }
+    else {
+        stopQuiz();
+    }
 }
 
-function endScore {
-    playScore.classList.remove('hide');
-    questionBox.classList.add('hide');
+function stopQuiz() {
     answerBtns.classList.add('hide');
+    submitBtn.classList.remove('hide');
+    endScore.classList.remove('hide');
+    correctIncorrect.innerHTML = "";
+    questionText.innerHTML = "Congratulations! You've completed the quiz! Please enter your initials below."
+    submitBtn.onclick = logHighscores
 }
 
-function submitQuiz() {
-    submitBtn.onclick = 
+function logHighscores() {
+    endScore.classList.add('hide')
 }
+
 

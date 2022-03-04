@@ -24,7 +24,7 @@
             <!-- area where questions and answers will be generated -->
             <div id="questions" class="qstStyle hide">
                 <p id="quest-text"></p>
-                <div id="answerBtns" class="possAnswers">
+                <div id="answer" class="possAnswers">
                     <button class="btn-answers" id="a">A</button>
                     <br>
                     <button class="btn-answers" id="b">B</button>
@@ -34,15 +34,19 @@
                     <button class="btn-answers" id="d">D</button>
                 </div>
                 <p id="correctIncorrect"></p>
-                <div class="controls">
-                    <button class="btn-submit" id="submit">Submit Results</button>
-                </div>
             </div>
 
-            <!-- user score -->
-            <div id="end-score" class="score">
+            <div id="end-score" class="score hide">
+                <form>
+                    <label for="initials">Initials</label>
+                    <input type="text" name="initials" id="initials" placeholder="Enter Text Here">
+                </form>
                 <span id="playScore">0</span>
                 <span id="total">/100</span>
+            </div>
+
+            <div id="submit" class="controls hide">
+                <button class="btn-submit">Submit Results</button>
             </div>
 
             <!-- highscores area -->
