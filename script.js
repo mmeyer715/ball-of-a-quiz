@@ -7,8 +7,6 @@ var optA = document.getElementById('a');
 var optB = document.getElementById('b');
 var optC = document.getElementById('c');
 var optD = document.getElementById('d');
-var backBtn = document.getElementById('back');
-var nextBtn = document.getElementById('next');
 var submitBtn = document.getElementById('submit');
 var playScore = document.getElementById('playScore');
 var highscore = document.getElementById('highscores');
@@ -16,6 +14,8 @@ var userName = document.getElementById('user-name');
 var userScore = document.getElementById('user-score');
 var returnStart = document.getElementById('return');
 var timer = document.getElementById('count');
+var correctIncorrect = document.getElementById('correctIncorrect');
+var answerBtns = document.getElementById('answerBtns');
 
 
 submitBtn.addEventListener('click',submit);
@@ -92,12 +92,12 @@ var quizQuest = [
         ]
     },
     {
-        question: "Where do we put the JavaScript inside of the HTML?",
+        question: "Which tag is used to link the JavaScript file inside of the HTML?",
         answers: [
-            {a: "<javascript>",answer:false},
-            {b: "<js>",answer:false},
-            {c: "<script>",answer:true},
-            {d: "<java>",answer:false},
+            {a: "javascript",answer:false},
+            {b: "js",answer:false},
+            {c: "script",answer:true},
+            {d: "java",answer:false},
         ]
     },
     {
@@ -119,7 +119,7 @@ var quizQuest = [
         ]
     },
     {
-        question: "What does the operator "===" translate to?",
+        question: "What does the operator '===' translate to?",
         answers: [
             {a: "returns the type of variable",answer:false},
             {b: "the values are equal only in value",answer:false},
@@ -142,12 +142,15 @@ function checkAns(event) {
         console.log(event.target.dataset.answer);
        if (event.target.dataset.answer === "true") {
            playScore.innerHTML = score += 10
+           correctIncorrect.innerHTML = "Correct!"
+           
        }
        else {
            secondsLeft -= 10 ;
+           correctIncorrect.innerHTML = "Incorrect!"
        }
-    currentQuestion++;
-    nextQuestion();
+       currentQuestion++;
+       nextQuestion();
 }
 
 
@@ -196,5 +199,15 @@ function nextQuestion() {
     optD.innerHTML = quizQuest[currentQuestion].answers[3].d;
     optD.dataset.answer = quizQuest[currentQuestion].answers[3].answer;
     optD.onclick = checkAns
+}
+
+function endScore {
+    playScore.classList.remove('hide');
+    questionBox.classList.add('hide');
+    answerBtns.classList.add('hide');
+}
+
+function submitQuiz() {
+    submitBtn.onclick = 
 }
 
