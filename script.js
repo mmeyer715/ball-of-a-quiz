@@ -17,6 +17,7 @@ var timer = document.getElementById('count');
 var correctIncorrect = document.getElementById('correctIncorrect');
 var answerBtns = document.getElementById('answer');
 var endScore = document.getElementById('end-score');
+var userForm = document.getElementById('user-form');
 
 // creating index to starting elements of quiz
 let currentQuestion = 0;
@@ -217,6 +218,19 @@ function logHighscores() {
     endScore.classList.add('hide');
     submitBtn.classList.add('hide');
     questionBox.classList.add('hide');
+    highscore.classList.remove('hide');
+    var scoresTable = document.getElementsByTagName('tbody')[0];
+    // put below rows inside of for loop
+    var row = scoresTable.insertRow(0);
+    // creating row for user initals
+    var cell1 = row.insertCell(0);
+    var cell1Text = document.createTextNode(document.getElementById('initials').value);
+    cell1.appendChild(cell1Text);
+    // creating row for user score
+    var cell2 = row.insertCell(1);
+    var cell2Text = document.createTextNode(score);
+    cell2.appendChild(cell2Text);
 }
+
 
 

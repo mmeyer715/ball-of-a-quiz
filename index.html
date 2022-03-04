@@ -37,7 +37,7 @@
             </div>
 
             <div id="end-score" class="score hide">
-                <form>
+                <form id="user-form">
                     <label for="initials">Initials</label>
                     <input type="text" name="initials" id="initials" placeholder="Enter Text Here">
                 </form>
@@ -52,15 +52,13 @@
             <!-- highscores area -->
             <div id="highscores" class="scores hide">
                 <table>
-                    <h3>Highscores</h3>
+                    <thead>
                         <tr>
-                            <th>Player</th>
-                            <th>Score</th>
+                            <th id="user-name">Player</th>
+                            <th id="user-score">Score</th>
                         </tr>
-                        <tr>
-                            <td id="user-name"></td>
-                            <td id="user-score"></td>
-                        </tr> 
+                    </thead>
+                    <tbody></tbody>
                 </table>
                     <button class="btn-back" id="return">Back</button>
             </div>
