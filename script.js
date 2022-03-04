@@ -210,11 +210,13 @@ function stopQuiz() {
     endScore.classList.remove('hide');
     correctIncorrect.innerHTML = "";
     questionText.innerHTML = "Congratulations! You've completed the quiz! Please enter your initials below."
-    submitBtn.onclick = logHighscores
+    submitBtn.onclick = logHighscores;
 }
 
 function logHighscores() {
-    endScore.classList.add('hide')
+    endScore.classList.add('hide');
+    submitBtn.classList.add('hide');
+    questionBox.classList.add('hide');
 }
 
 
