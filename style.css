@@ -57,6 +57,11 @@ header a {
     margin-left: 300px;
 }
 
+/* correctIncorrect styling */
+#correctIncorrect {
+    opacity: 50%;
+}
+
 /* button styling */
 .btn-answers {
     font-size: 15px;

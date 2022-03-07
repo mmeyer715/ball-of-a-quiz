@@ -1,1 +1,2 @@
-# ball-of-a-quiz
+# Quiz Quest - JavaScript Basics
+
