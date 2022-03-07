@@ -49,6 +49,7 @@ header a {
     font-size: 15px;
 }
 
+/* question styling */
 .qstStyle {
     color: black;
     font-size: 20px;
@@ -56,6 +57,7 @@ header a {
     margin-left: 300px;
 }
 
+/* button styling */
 .btn-answers {
     font-size: 15px;
     background-color: lightslategrey;
@@ -76,6 +78,7 @@ header a {
     font-size: 15px
 }
 
+/* score styling */
 .score {
     text-align: center;
     padding: 10px;
@@ -90,10 +93,9 @@ header a {
     border: 2px solid;
     border-radius: 5px;
     background-color: lightsteelblue;
-    margin: auto;
+    margin: -200px 50px 50px 50px;
     padding-left: 50px;
     padding-right: 50px;
-    position: absolute;
 }
 
 .scores table {

@@ -10,7 +10,7 @@
     <body>
         <!-- header with anchor to highscores plus timer -->
         <header>
-            <a href="#highscores"><h3>Highscores</h3></a>
+            <a href="#highscores" onclick="seeScores()"><h3>Highscores</h3></a>
             <h3>Time Remaining: <span id="count">90</span></h3>
         </header>
         <!-- starting main quiz container -->
@@ -60,7 +60,7 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-                    <button class="btn-back" id="return">Back</button>
+                    <button class="btn-back" onclick="returnIntro()">Back</button>
             </div>
         </main>
         <script src="./script.js"></script>

@@ -128,6 +128,7 @@ var quizQuest = [
     }
 ];
 
+// timer functionality
 function countdown () {
     secondsLeft--
     timer.innerHTML = secondsLeft
@@ -136,6 +137,7 @@ function countdown () {
     }
 }
 
+// validating question answers
 function checkAns(event) {
     event.preventDefault();
         console.log(event.target.dataset.answer);
@@ -153,7 +155,7 @@ function checkAns(event) {
 }
 
 
-
+//  function to initiate the beginning of the quiz
 function startQuiz() {
     quizIntro.classList.add('hide');
     questionBox.classList.remove('hide');
@@ -180,6 +182,7 @@ function startQuiz() {
     optD.onclick = checkAns
 }
 
+// function to move to next question
 function nextQuestion() {
     if(currentQuestion <= 9){
         questionText.innerHTML = quizQuest[currentQuestion].question;
@@ -205,6 +208,32 @@ function nextQuestion() {
     }
 }
 
+// function to see highscores
+function seeScores () {
+    endScore.classList.add('hide');
+    submitBtn.classList.add('hide');
+    questionBox.classList.add('hide');
+    highscore.classList.remove('hide');
+    quizIntro.classList.add('hide');
+
+    const hiScores = JSON.parse(localStorage.getItem("storedScores")) ?? [];
+    var scoresTable = document.getElementsByTagName('tbody')[0];
+
+    for (var i = 0; i < hiScores.length; i++) {
+        // put below rows inside of for loop
+        var row = scoresTable.insertRow();
+        // creating row for user initals
+        var cell1 = row.insertCell();
+        var cell1Text = document.createTextNode(hiScores[i].initials);
+        cell1.appendChild(cell1Text);
+        // creating row for user score
+        var cell2 = row.insertCell();
+        var cell2Text = document.createTextNode(hiScores[i].score);
+        cell2.appendChild(cell2Text);
+    }
+}
+
+// end of quiz functionality
 function stopQuiz() {
     answerBtns.classList.add('hide');
     submitBtn.classList.remove('hide');
@@ -214,23 +243,24 @@ function stopQuiz() {
     submitBtn.onclick = logHighscores;
 }
 
+//  logging results to local storage
 function logHighscores() {
-    endScore.classList.add('hide');
-    submitBtn.classList.add('hide');
-    questionBox.classList.add('hide');
-    highscore.classList.remove('hide');
-    var scoresTable = document.getElementsByTagName('tbody')[0];
-    // put below rows inside of for loop
-    var row = scoresTable.insertRow(0);
-    // creating row for user initals
-    var cell1 = row.insertCell(0);
-    var cell1Text = document.createTextNode(document.getElementById('initials').value);
-    cell1.appendChild(cell1Text);
-    // creating row for user score
-    var cell2 = row.insertCell(1);
-    var cell2Text = document.createTextNode(score);
-    cell2.appendChild(cell2Text);
+    var initials = document.getElementById('initials').value;
+
+    const hiScores = JSON.parse(localStorage.getItem("storedScores")) ?? [];
+    //add new record
+    hiScores.push({score, initials});
+    // set local storage
+    localStorage.setItem("storedScores", JSON.stringify(hiScores));
+
+    seeScores();
 }
+
+// return to quiz intro
+function returnIntro () {
+    location.reload();
+}
+
 
 
 
